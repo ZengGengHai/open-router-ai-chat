@@ -1,24 +1,15 @@
 import React from "react";
 import logo from "./logo.svg";
+import Button from "@mui/material/Button";
 import "./App.css";
+import { ChatPage } from "./layouts";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="mt-10"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full h-[100vh] flex-row-cente">
+      <div className="max-w-6xl mx-auto h-full">
+        <ChatPage />
+      </div>
     </div>
   );
 }

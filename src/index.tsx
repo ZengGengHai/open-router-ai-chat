@@ -4,6 +4,10 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/nord.min.css"
+/>;
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
