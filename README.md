@@ -2,8 +2,9 @@
 
 ![ai 聊天](public/image.png)
 
-基于 https://openrouter.ai/ 里面提供的免费model “Mistral 7B Instruct”作为ai provider，以此为基础开发聊天对话机器人
-网址 https://4b2df125.open-router-ai-chat.pages.dev/
+体验网址：https://4b2df125.open-router-ai-chat.pages.dev/
+
+基于 https://openrouter.ai/ 里面提供的免费model “Mistral 7B Instruct”作为ai provider 为基础开发聊天对话机器人
 
 ### 架构
 
