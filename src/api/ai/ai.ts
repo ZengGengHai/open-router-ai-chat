@@ -2,7 +2,15 @@ import { AxiosResponse } from "axios";
 import { instance } from "../instance";
 import { type IOpenRouerAi } from "./types";
 
-export async function postAi(): Promise<AxiosResponse<IOpenRouerAi>> {
+export async function postAi({
+  content,
+  ai_key,
+  ai_name,
+}: {
+  content: string;
+  ai_key: string;
+  ai_name: string;
+}): Promise<AxiosResponse<IOpenRouerAi>> {
   return instance.post(
     "/v1/chat/completions",
     {
@@ -10,14 +18,14 @@ export async function postAi(): Promise<AxiosResponse<IOpenRouerAi>> {
       messages: [
         {
           role: "user",
-          content: "how to use react, for example, give me code example",
+          content: content,
         },
       ],
     },
     {
       headers: {
-        Authorization:
-          "Bearer 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",
+        Authorization: `Bearer ${ai_key}`,
+        "X-Title": ai_name,
       },
     },
   );

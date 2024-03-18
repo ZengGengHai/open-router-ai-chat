@@ -1,23 +1,26 @@
 import React, { useMemo } from "react";
 import { RenderMarkdown } from "../render-markdown";
-import { SupportAgent, Person } from "@mui/icons-material";
+import { SupportAgent, Person, RestartAlt, Refresh } from "@mui/icons-material";
 import cx from "classnames";
 import { type Role } from "../../api/ai/types";
+import { ContentStatus } from "../../layouts/chat-page/type";
 
 interface ChatContentProps {
   role: Role;
   content: string;
+  id: string;
+  status: ContentStatus;
 }
 
 export const ChatContent = (props: ChatContentProps) => {
-  const { role, content } = props;
+  const { role, content, id, status } = props;
 
   const isOwner = useMemo(() => {
     return role === "user";
   }, [role]);
 
   return (
-    <div className="flex flex-row w-full gap-4 py-2">
+    <div className="flex flex-row w-full gap-4 py-2" id={id}>
       <div id="role-icon">
         <div
           className={cx(
@@ -33,7 +36,11 @@ export const ChatContent = (props: ChatContentProps) => {
           {isOwner ? "You" : "Assistant"}
         </div>
         <div id="content" className="text-ellipsis">
-          <RenderMarkdown markdown={content} />
+          {status === "loading" ? (
+            <Refresh className="animate-spin" />
+          ) : (
+            <RenderMarkdown markdown={content} />
+          )}
         </div>
       </div>
     </div>
