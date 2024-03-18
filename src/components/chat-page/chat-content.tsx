@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { RenderMarkdown } from "../render-markdown";
-import { SupportAgent, Person, RestartAlt, Refresh } from "@mui/icons-material";
+import { SupportAgent, Person, Refresh } from "@mui/icons-material";
 import cx from "classnames";
 import { type Role } from "../../api/ai/types";
 import { ContentStatus } from "../../layouts/chat-page/type";

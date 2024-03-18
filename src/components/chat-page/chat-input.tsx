@@ -1,15 +1,4 @@
-import Button from "@mui/material/Button";
-import React, {
-  Fragment,
-  useCallback,
-  useState,
-  type Dispatch,
-  type SetStateAction,
-  Component,
-  KeyboardEventHandler,
-  ChangeEvent,
-} from "react";
-import { postAi } from "../../api/ai/ai";
+import React, { type Dispatch, type SetStateAction, ChangeEvent } from "react";
 import { IconButton, InputAdornment, TextField } from "@mui/material";
 import { Telegram } from "@mui/icons-material";
 
