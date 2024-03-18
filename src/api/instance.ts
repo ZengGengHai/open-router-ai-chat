@@ -4,7 +4,7 @@ let baseURL;
 if (process.env.NODE_ENV === "development") {
   baseURL = "https://openrouter.ai/api";
 } else if (process.env.NODE_ENV === "production") {
-  baseURL = "...";
+  baseURL = "https://openrouter.ai/api";
 }
 
 const instance = axios.create({
