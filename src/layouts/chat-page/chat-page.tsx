@@ -13,7 +13,15 @@ interface ChatContentProps {
 
 export const ChatPage = () => {
   const [inputValue, setInputValue] = useState<string>("");
-  const [chatContents, setChatContents] = useState<ChatContentProps[]>([]);
+  const [chatContents, setChatContents] = useState<ChatContentProps[]>([
+    {
+      id: "1",
+      content:
+        "我是来自 OpenRouter （https://openrouter.ai/） 中免费模型 “Mistral 7B Instruct” 实现 Ai 对话，欢迎体验，项目地址为 https://github.com/ZengGengHai/open-router-ai-chat  ",
+      status: "success",
+      role: "assistant",
+    },
+  ]);
 
   const chatContensRef = useRef<HTMLDivElement>(null);
 
@@ -64,7 +72,7 @@ export const ChatPage = () => {
   }, [inputValue]);
 
   return (
-    <div className="p-4 pt-0 h-full flex flex-col gap-4">
+    <div className="p-4 h-full flex flex-col gap-4">
       <div
         id="chat-contents"
         className="flex-1 overflow-y-scroll overflow-hidden scrollable-element"
