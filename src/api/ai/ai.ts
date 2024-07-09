@@ -4,12 +4,8 @@ import { type IOpenRouerAi } from "./types";
 
 export async function postAi({
   content,
-  ai_key,
-  ai_name,
 }: {
   content: string;
-  ai_key: string;
-  ai_name: string;
 }): Promise<AxiosResponse<IOpenRouerAi>> {
   return instance.post(
     "/v1/chat/completions",
@@ -24,8 +20,8 @@ export async function postAi({
     },
     {
       headers: {
-        Authorization: `Bearer ${ai_key}`,
-        "X-Title": ai_name,
+        Authorization: `Bearer ${process.env.REACT_APP_AI_KEY}`,
+        "X-Title": process.env.REACT_APP_AI_NAME || "",
       },
     },
   );

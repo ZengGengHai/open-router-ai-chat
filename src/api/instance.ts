@@ -16,9 +16,6 @@ const instance = axios.create({
 instance.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
     // 在发送请求之前做些什么
-
-    // config.headers["Authorization"] =
-    //   "Bearer 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";
     config.headers["HTTP-Referer"] = "mistralai/mistral-7b-instruct:free";
 
     return config;

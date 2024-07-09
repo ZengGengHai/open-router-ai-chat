@@ -52,9 +52,6 @@ export const ChatPage = () => {
     }
     await postAi({
       content: inputValue,
-      ai_key:
-        "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",
-      ai_name: "zgh",
     }).then((data) => {
       setChatContents((prev) => {
         return prev.map((i) => {
