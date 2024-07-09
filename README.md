@@ -2,7 +2,7 @@
 
 ![ai 聊天](public/image.png)
 
-体验网址：https://81e4740f.open-router-ai-chat.pages.dev/
+体验网址：https://ai.zenggenghai.site
 
 基于 https://openrouter.ai/ 里面提供的免费model “Mistral 7B Instruct”作为ai provider 为基础开发聊天对话机器人
 
