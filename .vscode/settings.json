@@ -1,0 +1,9 @@
+{
+  "cSpell.words": ["mistralai", "rehype", "tailwindcss"],
+  "editor.wordWrapColumn": 100,
+  "search.exclude": {
+    "pnpm-lock.yaml": true,
+    "**/dist": true,
+    "**/node_modules": true
+  }
+}
