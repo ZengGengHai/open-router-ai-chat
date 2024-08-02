@@ -21,7 +21,7 @@ export async function postAi({
     {
       headers: {
         Authorization: `Bearer ${process.env.REACT_APP_AI_KEY}`,
-        "X-Title": process.env.REACT_APP_AI_NAME || "",
+        "X-Title": "chatbot-key",
       },
     },
   );
